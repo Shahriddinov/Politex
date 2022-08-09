@@ -1,0 +1,120 @@
+.wrapper {
+    width: 100%;
+    padding: 8px 0;
+    background: var(--primary-2);
+    color: white;
+
+    &Container {
+        padding: 0 140px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 1640px;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 1440px) {
+            & {
+                padding: 0 100px;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 834px) {
+            & {
+                padding: 0 60px;
+                justify-content: space-between;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 540px) {
+            & {
+                padding: 0 15px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &Lang {
+        display: none;
+
+        @media only screen and (max-width: 834px) {
+            & {
+                display: block;
+            }
+        }
+
+    }
+
+    &Uzb {
+        display: flex;
+        gap: 20px;
+
+        @media only screen and (max-width: 834px) {
+            & {
+                display: none;
+            }
+        }
+
+    }
+
+    &Right {
+        display: none;
+        gap: 18px;
+
+        @media only screen and (max-width: 834px) {
+            & {
+                display: flex;
+            }
+        }
+
+    }
+
+    &Icons {
+        display: flex;
+        gap: 60px;
+
+        @media only screen and (max-width: 1440px) {
+            & {
+                gap: 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (max-width: 834px) {
+            & {
+                gap: 18px;
+            }
+        }
+
+
+        &Container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            color: white;
+
+            span {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                text-decoration: none;
+
+                @media only screen and (max-width: 1440px) {
+                    & {
+                        font-size: 14px;
+                    }
+                }
+
+                @media only screen and (max-width: 834px) {
+                    & {
+                        display: none;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

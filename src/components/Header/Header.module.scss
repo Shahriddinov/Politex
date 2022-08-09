@@ -1,0 +1,108 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: var(--primary);
+    color: white;
+
+    &Container {
+        position: relative;
+        padding: 0 140px;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        justify-content: space-between;
+        max-width: 1640px;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 1440px) {
+            & {
+                padding: 0 100px;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 834px) {
+            & {
+                padding: 0 60px;
+                justify-content: space-between;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 540px) {
+            & {
+                padding: 0 15px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &Title {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        @media only screen and (max-width: 1440px) {
+            & {
+                gap: 20px;
+            }
+        }
+
+
+        a {
+            img {
+                width: 110px;
+                height: 110px;
+
+                @media only screen and (max-width: 1440px) {
+                    & {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--seconday);
+
+            @media only screen and (max-width: 1440px) {
+                & {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: var(--seconday);
+                }
+            }
+        }
+    }
+
+    &Menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        a {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            color: white;
+
+            @media only screen and (max-width: 1440px) {
+                & {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1440px) {
+            & {
+                gap: 30px;
+            }
+        }
+
+    }
+}

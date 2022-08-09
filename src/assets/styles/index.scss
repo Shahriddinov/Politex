@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #1B6B50;
+    --primary-2: #15523D;
+    --secondary: #F5F5F7;
+    --secondary-2: #737277;
+    --black: #37363C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: block;
+    background: var(--secondary) !important;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.zoom {
+    zoom: 1.1;
+}
+
+.grayscale {
+    filter: grayscale(1) contrast(1.5) brightness(1);
+    mix-blend-mode: multiply;
+}
+
+.responsive {
+    position: relative;
+    padding: 0 140px;
+    max-width: 1640px;
+    margin: auto;
+
+    @media only screen and (max-width: 1440px) {
+        & {
+            padding: 0 100px;
+        }
+    }
+
+    @media only screen and (max-width: 834px) {
+        & {
+            padding: 0 60px;
+        }
+    }
+
+    @media only screen and (max-width: 540px) {
+        & {
+            padding: 0 15px;
+        }
+    }
+}

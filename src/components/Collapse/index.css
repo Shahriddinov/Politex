@@ -1,0 +1,24 @@
+.ant-collapse,
+.ant-collapse-item {
+    border: none !important;
+    background: transparent !important;
+}
+
+.ant-collapse-header {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
+.ant-collapse-content-box {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+.ant-collapse-content {
+    margin-top: 10px;
+    margin-left: 20px;
+    border: none !important;
+    background: transparent !important;
+}

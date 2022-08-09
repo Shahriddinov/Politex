@@ -1,0 +1,139 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    background: var(--primary);
+    box-shadow: 0px 1.76514px 5.73671px rgba(27, 25, 25, 0.15);
+    transition: .3s;
+
+    &--active {
+        background: white;
+    }
+
+    &Container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        max-width: 834px;
+        margin: 0 auto;
+        padding: 0 60px;
+        justify-content: space-between;
+        color: white;
+
+        &--active {
+            max-width: 834px;
+            margin: 0 auto;
+            padding: 20px 60px;
+        }
+
+        &Item {
+            color: var(--primary);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        @media only screen and (max-width: 540px) {
+            & {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    &Title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 50px;
+            height: 50px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--seconday);
+            width: 400px;
+        }
+    }
+
+    &Action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &Icon {
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        &Close {
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--primary) !important;
+        }
+    }
+
+    &Menu {
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        max-width: 834px;
+        margin: 0 auto;
+        padding: 0 60px;
+        transition: .3s;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        &--active {
+            height: fit-content;
+        }
+
+        &Button {
+            border-bottom: 1px solid var(--primary);
+            padding: 7px 10px;
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+            transition: .3s;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--black);
+
+            &--active {
+                background: var(--primary);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+                color: white;
+            }
+
+            &:hover {
+                background: var(--primary);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+                color: white;
+            }
+        }
+    }
+
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.2;
+
+}

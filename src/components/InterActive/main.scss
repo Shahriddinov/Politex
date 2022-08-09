@@ -1,0 +1,124 @@
+.service {
+  .card {
+    transition: 0.8s;
+    margin-bottom: 50px;
+    border-bottom: 4px solid transparent;
+    box-shadow: 0 8px 16px -5px rgba(0, 0, 0, 0.247);
+
+    &:hover {
+      box-shadow: 0px 8px 16px -5px rgba(0, 0, 0, 0.096);
+      background-color: #F4F8F6;
+      border-color: #1B6B50;
+    }
+
+    &__img {
+      width: 32px;
+      height: 30px;
+    }
+
+    &__text {
+      margin-left: 47px;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 32px;
+      color: #37363C;
+
+      &>h5 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+      &>p {
+        margin-top: 8px;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+    }
+  }
+}
+
+
+.in__items__img {
+
+  .airDiv {
+    animation: air 5s infinite;
+  }
+
+  @keyframes air {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .leaf {
+    animation: leaf 8s infinite;
+  }
+
+  @keyframes leaf {
+    0% {
+      transform: rotate(-5deg);
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-5deg);
+    }
+  }
+
+  .cloud {
+    animation: cloud 4s infinite;
+  }
+
+  @keyframes cloud {
+    0% {
+      transform: rotate(5deg)
+    }
+
+    50% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(5deg);
+    }
+  }
+
+  .rot {
+    animation: rot 8s infinite;
+  }
+
+  @keyframes rot {
+    0% {
+      transform: rotate(0deg)
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  .rot2 {
+    animation: rot2 8s infinite;
+  }
+
+  @keyframes rot2 {
+    0% {
+      transform: rotate(360deg)
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.wrapper {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: var(--black);
+
+    &Input {
+        border: none;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &Icon{
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
