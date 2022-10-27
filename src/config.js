@@ -7,7 +7,7 @@ const config = {
     list: ["uz", "ru", "en"]
   },
   api: {
-    base_url: "https://mustafo.na4u.ru"
+    base_url: "https://politex.justns.ru"
   }
 };
 

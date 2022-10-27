@@ -43,7 +43,7 @@ const Home = () => {
           </div>
           <div className="responsive">
             <div className="mt-12 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-5">
-              {Array.isArray(items) && items.map(item => <FaculityCard key={item?.id} item={item} />)}
+              {Array.isArray(items) && items.map((item, id) => <FaculityCard key={id} item={item} />)}
             </div>
           </div>
         </section>

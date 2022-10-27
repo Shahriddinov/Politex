@@ -1,8 +1,13 @@
 import i18n from "i18next";
 import HttpApi from "i18next-xhr-backend";
 import { initReactI18next } from "react-i18next";
-
+import uz from "../../Ing/uz.json"
+import ru from "../../Ing/ru.json"
+import en from "../../Ing/en.json"
 // eslint-disable-next-line import/prefer-default-export
+
+
+const availableLanguages = ["uz", "ru", "en"];
 export const init = ({ languages, currentLanguage, initialLanguage, backend, debug, onChange }) => {
   i18n.on("languageChanged", language => onChange(language));
 

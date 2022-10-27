@@ -32,8 +32,8 @@ const Footer = () => {
             </div>
           </div>
           <div className={classes.wrapperList}>
-            {footer.map(item => (
-              <span onClick={() => navigate(item?.path)}>{t(item.title)}</span>
+            {footer.map((item, index) => (
+              <span onClick={() => navigate(item?.path)} key={index}>{t(item.title)}</span>
             ))}
           </div>
           <div className={classes.wrapperMap}>

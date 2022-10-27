@@ -27,8 +27,8 @@ const NewsSection = () => {
             <h2>{t("loading")}</h2>
           ) : (
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[50px]">
-              {items?.slice(0, 6)?.map(item => (
-                <NewsCard key={item} item={item} />
+              {items?.slice(0, 6)?.map((item, id) => (
+                <NewsCard key={id} item={item} />
               ))}
             </div>
           )}

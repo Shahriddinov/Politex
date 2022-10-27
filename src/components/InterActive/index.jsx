@@ -49,8 +49,8 @@ const InterActive = () => {
             }}
           >
             {Array.isArray(items) &&
-              items.map(item => (
-                <SwiperSlide key={item?.id} className="w-full">
+              items.map((item, index) => (
+                <SwiperSlide key={index} className="w-full">
                   <Services item={item} />
                 </SwiperSlide>
               ))}

@@ -36,18 +36,18 @@ const Mobile = () => {
       <div className={cx(classes.menu, open && classes["menu--active"])}>
         <Search />
         <div className={classes.menuPaths}>
-          {paths.map(item => (
-            <button className={classes.menuPathsButton} onClick={() => navigate(item.path)}>
+          {paths.map((item,id) => (
+            <button className={classes.menuPathsButton}  onClick={() => navigate(item.path)} key={id}>
               {t(item.title)}
             </button>
           ))}
         </div>
         <div className={classes.menuList}>
-          {menus.map(menu =>
+          {menus.map((menu,id) =>
             menu.children ? (
-              <List key={menu?.title}>
+              <List key={id}>
                 <Item
-                  key={menu?.title}
+                  key={id}
                   header={
                     <div className={classes.menuListButton}>
                       <span>{t(menu?.title)}</span>
@@ -56,11 +56,11 @@ const Mobile = () => {
                   }
                 >
                   <div className={classes.menuList}>
-                    {menu?.children?.map(item =>
+                    {menu?.children?.map((item, id) =>
                       item.children ? (
-                        <List key={item?.title}>
+                        <List key={id}>
                           <Item
-                            key={item?.title}
+                            key={id}
                             header={
                               <div className={classes.menuListButton}>
                                 <span>{t(item?.title)}</span>
@@ -69,11 +69,11 @@ const Mobile = () => {
                             }
                           >
                             <div className={classes.menuList}>
-                              {item?.children?.map(child =>
+                              {item?.children?.map((child, id) =>
                                 child.children ? (
-                                  <List key={child?.title}>
+                                  <List key={id}>
                                     <Item
-                                      key={child?.title}
+                                      key={id}
                                       header={
                                         <div className={classes.menuListButton}>
                                           <span>{t(child?.title)}</span>
@@ -82,8 +82,8 @@ const Mobile = () => {
                                       }
                                     >
                                       <div className={classes.menuList}>
-                                        {child?.children?.map(subChild => (
-                                          <div onClick={() => navigate(subChild?.path)} className={classes.menuListButton}>
+                                        {child?.children?.map((subChild, id) => (
+                                          <div key={id} onClick={() => navigate(subChild?.path)} className={classes.menuListButton}>
                                             <span>{t(subChild?.title)}</span>
                                           </div>
                                         ))}

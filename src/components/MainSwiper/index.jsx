@@ -36,21 +36,21 @@ const MainSwiper = () => {
           slidesPerView={1}
         >
           {Array.isArray(items) &&
-            items.map(item => (
+            items.map((item, id) => (
               <SwiperSlide>
                 <div className="grid sm:grid-cols-2 grid-cols-1 justify-between items-center">
                   <div className="sm:hidden block">
-                    <img height={600} className="object-cover object-center rounded-lg shadow-lg" src={`${config.api.base_url}/storage/${item?.img}`} />
+                    <img height={600} className="object-cover object-center rounded-lg shadow-lg"  src={`${config.api.base_url}/storage/${item?.img}`} key={id} />
                   </div>
                   <div className="flex flex-col items-center justify-center w-[450px] mx-auto">
-                    <h1 className="md:text-2xl text-lg sm:text-start text-center font-bold">{item?.name[i18n.language]}</h1>
-                    <p className="md:text-base sm:text-start text-center">{item?.content[i18n.language]}</p>
+                    <h1 className="md:text-2xl text-lg sm:text-start text-center font-bold" >{item?.name[i18n.language]} key={id}</h1>
+                    <p className="md:text-base sm:text-start text-center" >{item?.content[i18n.language]} key={id}</p>
                     <div className="flex justify-end items-end w-full gap-10">
                       <Button className="px-5 py-1" title="Batafsil" />
                     </div>
                   </div>
                   <div className="sm:block hidden ">
-                    <img className="object-cover object-center rounded-lg shadow-lg h-full w-full" src={`${config.api.base_url}/storage/${item?.img}`} />
+                    <img className="object-cover object-center rounded-lg shadow-lg h-full w-full"  src={`${config.api.base_url}/storage/${item?.img}`} key={id} />
                   </div>
                 </div>
               </SwiperSlide>

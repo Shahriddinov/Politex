@@ -9,11 +9,11 @@ const Header = () => {
   const { t } = useTranslation();
   const urls = [
     {
-      title: "finance_activity",
+      title: t("finance_activity"),
       link: "/finance_activity"
     },
     {
-      title: "electron_library",
+      title: t("electron_library"),
       link: "/electron_library"
     },
     {
@@ -37,8 +37,8 @@ const Header = () => {
         </div>
 
         <div className={classes.wrapperMenu}>
-          {urls.map(item => (
-            <Link to={item.link}>{t(item.title)}</Link>
+          {urls.map((item,id) => (
+            <Link to={item.link} key={id}>{t(item.title)}</Link>
           ))}
           <LanguageSwitcher />
         </div>

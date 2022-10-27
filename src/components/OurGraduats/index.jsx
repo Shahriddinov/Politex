@@ -47,8 +47,8 @@ const OurGraduats = () => {
               slidesPerView={1}
             >
               {Array.isArray(items) &&
-                items.map(item => (
-                  <SwiperSlide key={item.id}>
+                items.map((item, index) => (
+                  <SwiperSlide key={index}>
                     <CardStudent item={item} />
                   </SwiperSlide>
                 ))}
